@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.filter-buttons {
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.filter-buttons button {
+    padding: 3px;
+    margin-right: 5px;
+    cursor: pointer;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.filter-buttons button:hover {
+    background: mediumspringgreen;
+}
+
+ol {
+    border: 20px dotted mediumspringgreen;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 50px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 15px;
+    padding: 20px;
+}
+
+li {
+    list-style-position: inside; 
+    border: none;               
+    width: auto;
+    height: 100%;
+    background: transparent;    
+    writing-mode: vertical-rl;
+    word-break: keep-all;  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+li .eye {
+    height: 20px;          
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    background: rgb(255, 255, 255);
+    margin-bottom: -8.5px;
+}
+
+li .text {
+    flex: 1;
+    background: rgb(0, 255, 255);
+    padding: 10px 0px; 
+    white-space: nowrap;
+    writing-mode: vertical-rl;
+    overflow-y: auto;
+}
+
