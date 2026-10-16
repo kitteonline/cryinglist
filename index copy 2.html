@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>언제 울어봤나요</title>
+    <style>
+        .filter-buttons {
+            margin-bottom: 10px;
+        }
+        .filter-buttons button {
+            padding: 2px 5px;
+            margin-right: 2px;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none !important;
+        }
+    </style>
+    <link rel="stylesheet" href="style copy.css"> 
+
+</head>
+<body>
+    <div class="filter-buttons">
+        <button onclick="showCategory('all')">전체보기</button>
+        <button onclick="showCategory('감동')">감동</button>
+        <button onclick="showCategory('슬픔')">슬픔</button>
+        <button onclick="showCategory('방어')">방어</button>
+        <button onclick="showCategory('놀람')">놀람</button>
+        <button onclick="showCategory('분노')">분노</button>
+        <button onclick="showCategory('고통')">고통</button>
+
+        <button onclick="showCategory('무서움')">무서움</button>
+
+    </div>
+
+    <div id="rawSource" style="display: none;">
+        <ol data-group="감동">
+            <li>라라랜드 후반부의 연출이 너무 아름다울 때</li>
+            <li>웃음이 터져서 멈추지 못할 때</li>
+            <li>스파이더맨 더 뉴유니버스의 한장면 한장면의 노고가 와닿아서 너무 감동적임을 느꼈을 때</li>
+            <li>아빠한테 전화할 때</li>
+            <li>콘서트가 너무 감동적이었을 때</li>
+            <li>다비치 쇼케이스 가서 감격의 눈물</li>
+            <li>진짜 무해하고 힐링되는 무언가를 볼 때</li>
+            <li>이루마군이 기특해서 볼 때마다</li>
+            <li>동백꽃필 무렵 보다가 감정 이입될 때</li>
+            <li>스파이더맨에 이입해서 젠데이야가 너무 보고싶을 때</li>
+        </ol>
+        <ol data-group="슬픔">
+            <li>) 거짓말 당했을 때</li>
+            <li>마음이 보고있을 때</li>
+            <li>웨딩드레스라는 영화에서 엄마가 뭔가 남기고 죽은 뒤..엄마버튼에 의해 움(인생에서 가장 조용히 울었음)</li>
+            <li>반려동물이 아플 때</li>
+            <li>엄마가 입원해 누워계실 때</li>
+            <li>밤에 잠 안자고 mp3로 온새미로 읽을 때</li>
+            <li>내일에서 독립유공자 할아버지가 고독사할 때</li>
+            <li>늘 챙겨보던 크루 중 한명이 갑자기 활동중단을 할 때</li>
+            <li>결혼식장에서 신부측 부모님의 축사를 들을 때</li>
+            <li>코코에서 할머니가 코코에게 말을 할 때</li>
+            <li>아이언맨 죽었을 때</li>
+            <li>친했던 친구와 손절했을 때</li>
+            <li>코로나 걸렸을 때 평냉포장을 안해준다고해서 서러울 때</li>
+            <li>막차 고속버스를 잘못타서 황무지에 내려서, 엄마한테 전화할 때</li>
+        </ol>
+        <ol data-group="놀람">
+            <li>태어날 때</li>
+            <li>친구가 발가락을 찧어서 너무 큰소리가 났는데 어떻게 됐는지 안보여줄 때</li>
+        </ol>
+        <ol data-group="무서움">
+            <li>브링 허 백 보면서 스트레스 맥스상태일 때</li>
+            <li>아파트 보고 엘리베이터 탈 때</li>
+            <li>코난극장판 침묵의 15분에서 코난이 실종되었을 때</li>
+            <li>눈밭에서 핸드폰을 잃어버렸을 때</li>
+            <li>많은 사람들 앞에서 자기소개 발표할 때</li>
+            <li>싸움인줄 알았는데 나만 맞고있을 때</li>
+            <li>버스를 잘못타서 엉뚱한 곳으로 가고있을 때</li>
+            <li>잘 모르는 사람이랑 맞춰가려다가 안 맞아서 관계 끊길 뻔 했다가 다시 잘 해보자고 했을 때 비대면으로 대화 종료 직후 긴장 풀려서 울음</li>
+        </ol>
+        <ol data-group="분노">
+            <li>초딩때 남자애랑 싸울 때</li>
+            <li>대리님이 자꾸 실수하는데 내가 혼났을 때</li>
+            <li>말이 안 통할 때</li>
+            <li>주변이 내 말을 안듣고 안믿어서 억울할 때</li>
+            <li>회사에서 이상한 사람이 이상한 말 걸었을 때ㅡㅡ</li>
+            <li>직장동료가 너무 비효율적으로 일해서 나만 헛수고했을 때</li>
+            <li>동생이 잘못했는데 나까지 혼나서 억울할 때</li>
+            <li>나와 비슷한 사람들이 자꾸 죽어갈 때</li>
+            <li>태풍으로 출퇴근 할때 온몸이 비에 젖은 채 버스를 탈 때</li>
+            <li>할리갈리에서 졌을 때</li>
+        </ol>
+        <ol data-group="고통">
+            <li>발가락을 쇼파 다리에 찧었을 때</li>
+            <li>치과에서 사랑니를 빼고 마취가 풀렸을 때</li>
+            <li>입주변에 뾰루지를 해치울 때</li>
+            <li>너무 쓴 약을 먹었을 때</li>
+            <li>스파게티니젤리를 먹다가 너무 시고 사레걸렸을 때</li>
+            <li>체해서 엄마가 엄지손 따줄 때</li>
+            <li>토할 때</li>
+            <li>마스카라로 눈 찔렀을 때</li>
+            <li>친구집에 갔다가 현관문 바로 앞에 서있어서 엄지발톱이 현관문에 끼어 깨지고 피를 흘리면서 집으로 돌아갈 때</li>
+            <li>초딩 때 어떤애가 돌 던지거 눈 쪽에 맞았었는데 맞을 때는 안 울었다가 애들이 피난다고 말해줬을 때</li>
+        </ol>
+        <ol data-group="방어">
+            <li>눈 부실 때</li>
+            <li>하품할 때</li>
+            <li>눈을 세게 비볐을 때</li>
+            <li>태양을 또렷이 직시할 때</li>
+            <li>엄청 뜨거운 된장찌개 먹었을 때</li>
+            <li>매운 짬뽕 먹다가 사레걸렸을 때</li>
+            <li>동생이랑 눈싸움 하는 중에</li>
+            <li>찬바람 맞을 때</li>
+        </ol>
+    </div>
+
+    <div id="displayArea"></div>
+    
+    <script>
+        let allItemsArray = [];
+
+        const sourceOls = document.querySelectorAll('#rawSource ol');
+        sourceOls.forEach(ol => {
+            const groupName = ol.getAttribute('data-group');
+            const lis = ol.querySelectorAll('li');
+            lis.forEach(li => {
+                li.setAttribute('data-kind', groupName);
+                allItemsArray.push(li);
+            });
+        });
+
+        allItemsArray.sort((a, b) => a.textContent.localeCompare(b.textContent));
+
+        const mainOl = document.createElement('ol'); 
+
+        allItemsArray.forEach(li => {
+            const text = li.textContent.replace(') ', ''); 
+            li.innerHTML = `
+                <div class="eye">)</div>
+                <div class="text">${text}</div>
+            `;
+            mainOl.appendChild(li);
+        });
+
+        document.getElementById('displayArea').appendChild(mainOl);
+
+        function showCategory(kind) {
+            allItemsArray.forEach(li => {
+                if (kind === 'all' || li.getAttribute('data-kind') === kind) {
+                    li.classList.remove('hidden');
+                } else {
+                    li.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
